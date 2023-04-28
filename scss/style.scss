@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import "reset.scss";
+
+#slider {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden;
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc(100% * 3);
+    height: 100%;
+
+    li {
+      width: calc(100% / 3);
+      height: 100%;
+      font-size: 40px;
+      color: #000;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &[data-index="1"] {
+        background-color: aqua;
+      }
+
+      &[data-index="2"] {
+        background-color: hotpink;
+      }
+
+      &[data-index="3"] {
+        background-color: orange;
+      }
+    }
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -50px;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  margin-top: -50px;
+}
